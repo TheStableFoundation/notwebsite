@@ -1,0 +1,28 @@
+{
+  "name": "notwebsite",
+  "version": "1.0.0",
+  "description": "NotWallet Crypto - A modern crypto wallet app website",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "keywords": [
+    "crypto",
+    "wallet",
+    "notwallet",
+    "astrojs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^5.14.4",
+    "tailwindcss": "^3.4.18",
+    "typescript": "^5.9.3"
+  }
+}
