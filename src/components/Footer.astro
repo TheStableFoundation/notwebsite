@@ -1,43 +1,88 @@
 ---
+import { Image } from "astro:assets";
 ---
 
 <footer class="bg-nordic-text text-white py-12">
-  <div class="container mx-auto px-6">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-      <div class="col-span-1 md:col-span-2">
-        <div class="flex items-center space-x-2 mb-4">
-          <svg class="w-8 h-8 text-nordic-secondary" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/>
-          </svg>
-          <span class="text-2xl font-bold">NotWallet</span>
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center space-x-2 mb-4">
+                    <Image
+                        src="/app-icon.png"
+                        alt="app icon"
+                        width={50}
+                        height={50}
+                    />
+                    <span class="text-2xl font-bold">NotWallet Crypto</span>
+                </div>
+                <p class="text-gray-400 mb-4">
+                    A modern crypto wallet designed in Stockholm, Sweden.
+                    Simple, secure, and Nordic.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="font-semibold mb-4">Links</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li>
+                        <a
+                            href="/#features"
+                            class="hover:text-nordic-secondary transition-colors"
+                            >Features</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="/#about"
+                            class="hover:text-nordic-secondary transition-colors"
+                            >About</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="/#download"
+                            class="hover:text-nordic-secondary transition-colors"
+                            >Download</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="/#contact"
+                            class="hover:text-nordic-secondary transition-colors"
+                            >Contact</a
+                        >
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="font-semibold mb-4">Legal</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li>
+                        <a
+                            href="/privacy"
+                            class="hover:text-nordic-secondary transition-colors"
+                            >Privacy Policy</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="/terms"
+                            class="hover:text-nordic-secondary transition-colors"
+                            >Terms of Service</a
+                        >
+                    </li>
+                </ul>
+            </div>
         </div>
-        <p class="text-gray-400 mb-4">
-          A modern crypto wallet designed in Stockholm, Sweden. Simple, secure, and Nordic.
-        </p>
-      </div>
-      
-      <div>
-        <h3 class="font-semibold mb-4">Links</h3>
-        <ul class="space-y-2 text-gray-400">
-          <li><a href="#features" class="hover:text-nordic-secondary transition-colors">Features</a></li>
-          <li><a href="#about" class="hover:text-nordic-secondary transition-colors">About</a></li>
-          <li><a href="#download" class="hover:text-nordic-secondary transition-colors">Download</a></li>
-          <li><a href="#contact" class="hover:text-nordic-secondary transition-colors">Contact</a></li>
-        </ul>
-      </div>
-      
-      <div>
-        <h3 class="font-semibold mb-4">Legal</h3>
-        <ul class="space-y-2 text-gray-400">
-          <li><a href="/notwebsite/privacy" class="hover:text-nordic-secondary transition-colors">Privacy Policy</a></li>
-          <li><a href="/notwebsite/terms" class="hover:text-nordic-secondary transition-colors">Terms of Service</a></li>
-          <li><a href="#" class="hover:text-nordic-secondary transition-colors">Cookie Policy</a></li>
-        </ul>
-      </div>
+
+        <div
+            class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400"
+        >
+            <p>
+                &copy; {new Date().getFullYear()} NotWallet Crypto. All rights reserved.
+                Made with ❄️ in Stockholm.
+            </p>
+        </div>
     </div>
-    
-    <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-      <p>&copy; {new Date().getFullYear()} NotWallet. All rights reserved. Made with ❄️ in Stockholm.</p>
-    </div>
-  </div>
 </footer>
