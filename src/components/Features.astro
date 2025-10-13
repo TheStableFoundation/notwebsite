@@ -33,27 +33,27 @@ const features = [
 ];
 ---
 
-<section id="features" class="py-20 bg-white">
+<section id="features" class="py-20 bg-nordic-paper">
   <div class="container mx-auto px-6">
     <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-bold text-nordic-dark mb-4">
+      <h2 class="text-4xl md:text-5xl font-bold text-nordic-text mb-4">
         Why Choose NotWallet?
       </h2>
-      <p class="text-xl text-nordic-gray max-w-2xl mx-auto">
+      <p class="text-xl text-nordic-text-secondary max-w-2xl mx-auto">
         Experience the perfect blend of Nordic simplicity and powerful crypto management
       </p>
     </div>
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {features.map((feature) => (
-        <div class="p-6 rounded-2xl bg-gradient-to-br from-nordic-light to-white hover:shadow-xl transition-shadow duration-300">
-          <div class="w-12 h-12 bg-nordic-accent rounded-lg flex items-center justify-center mb-4">
+        <div class="p-6 rounded-nordic bg-gradient-to-br from-nordic-info to-nordic-paper hover:shadow-xl transition-shadow duration-300">
+          <div class="w-12 h-12 bg-nordic-accent rounded-nordic flex items-center justify-center mb-4">
             <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24" set:html={feature.icon} />
           </div>
-          <h3 class="text-xl font-semibold text-nordic-dark mb-2">
+          <h3 class="text-xl font-semibold text-nordic-text mb-2">
             {feature.title}
           </h3>
-          <p class="text-nordic-gray">
+          <p class="text-nordic-text-secondary">
             {feature.description}
           </p>
         </div>
