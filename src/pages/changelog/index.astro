@@ -5,12 +5,20 @@ import Footer from "../../components/Footer.astro";
 
 const changelogPosts = [
     {
+        slug: "platform-updates-ios-android-macos",
+        title: "Platform Updates: NotWallet Crypto for iOS, Android, and macOS",
+        description: "Major updates across all platforms bringing enhanced performance, new features, and improved user experience to NotWallet Crypto.",
+        date: "2025-11-03",
+        category: "Updates",
+        featured: true,
+    },
+    {
         slug: "cold-a-hardware-wallet-by-notwallet-crypto",
         title: "Introducing Cold ❄️: The Next Generation Hardware Wallet",
         description: "NotWallet Crypto announces Cold ❄️, our first hardware wallet designed for ultimate security and ease of use. Coming soon.",
-        date: "2024-01-15",
+        date: "2025-10-15",
         category: "Product Launch",
-        featured: true,
+        featured: false,
     },
 ];
 ---
@@ -46,11 +54,29 @@ const changelogPosts = [
                                         </span>
                                     </div>
                                 )}
-                                <div class="bg-gradient-to-br from-nordic-accent to-blue-500 h-64 md:h-full flex items-center justify-center">
+                                <div class={`h-64 md:h-full flex items-center justify-center ${
+                                    post.slug === "platform-updates-ios-android-macos"
+                                        ? "bg-gradient-to-br from-nordic-accent to-blue-500"
+                                        : "bg-gradient-to-br from-nordic-accent to-blue-500"
+                                }`}>
                                     <div class="text-center text-white p-8">
-                                        <div class="text-6xl mb-4">❄️</div>
-                                        <h3 class="text-2xl font-bold">Cold ❄️</h3>
-                                        <p class="text-sm mt-2 text-white/80">Coming Soon</p>
+                                        {post.slug === "platform-updates-ios-android-macos" ? (
+                                            <>
+                                                <div class="flex justify-center gap-4 mb-4">
+                                                    <span class="text-4xl">📱</span>
+                                                    <span class="text-4xl">🤖</span>
+                                                    <span class="text-4xl">💻</span>
+                                                </div>
+                                                <h3 class="text-2xl font-bold">v3.2.0</h3>
+                                                <p class="text-sm mt-2 text-white/80">All Platforms</p>
+                                            </>
+                                        ) : (
+                                            <>
+                                                <div class="text-6xl mb-4">❄️</div>
+                                                <h3 class="text-2xl font-bold">Cold ❄️</h3>
+                                                <p class="text-sm mt-2 text-white/80">Coming Soon</p>
+                                            </>
+                                        )}
                                     </div>
                                 </div>
                             </div>
