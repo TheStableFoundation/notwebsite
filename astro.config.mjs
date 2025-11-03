@@ -11,4 +11,7 @@ export default defineConfig({
   integrations: [tailwind()],
   site: "https://notwallet.eu",
   base: "/",
+  redirects: {
+    "/t": "/t/solana",
+  },
 });
