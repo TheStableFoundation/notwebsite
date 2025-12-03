@@ -8,7 +8,8 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test:releases": "node scripts/test-github-releases.js"
   },
   "keywords": [
     "crypto",
