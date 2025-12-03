@@ -5,12 +5,20 @@ import Footer from "../../components/Footer.astro";
 
 const changelogPosts = [
     {
+        slug: "web3-community-data-provider",
+        title: "Two of Us: NotWallet x Web3 Community Data Provider Program",
+        description: "Join the NotWallet Community Data Provider Program and earn rewards for contributing to the future of decentralized finance while maintaining your privacy.",
+        date: "2025-12-02",
+        category: "Community",
+        featured: true,
+    },
+    {
         slug: "platform-updates-ios-android-macos",
         title: "Platform Updates: NotWallet Crypto for iOS, Android, and macOS",
         description: "Major updates across all platforms bringing enhanced performance, new features, and improved user experience to NotWallet Crypto.",
         date: "2025-11-03",
         category: "Updates",
-        featured: true,
+        featured: false,
     },
     {
         slug: "cold-a-hardware-wallet-by-notwallet-crypto",
@@ -55,12 +63,24 @@ const changelogPosts = [
                                     </div>
                                 )}
                                 <div class={`h-64 md:h-full flex items-center justify-center ${
-                                    post.slug === "platform-updates-ios-android-macos"
+                                    post.slug === "web3-community-data-provider"
+                                        ? "bg-gradient-to-br from-nordic-accent to-purple-600"
+                                        : post.slug === "platform-updates-ios-android-macos"
                                         ? "bg-gradient-to-br from-nordic-accent to-blue-500"
                                         : "bg-gradient-to-br from-nordic-accent to-blue-500"
                                 }`}>
                                     <div class="text-center text-white p-8">
-                                        {post.slug === "platform-updates-ios-android-macos" ? (
+                                        {post.slug === "web3-community-data-provider" ? (
+                                            <>
+                                                <div class="flex justify-center gap-4 mb-4">
+                                                    <span class="text-4xl">🤝</span>
+                                                    <span class="text-4xl">🌐</span>
+                                                    <span class="text-4xl">💎</span>
+                                                </div>
+                                                <h3 class="text-2xl font-bold">Community Program</h3>
+                                                <p class="text-sm mt-2 text-white/80">Earn Rewards</p>
+                                            </>
+                                        ) : post.slug === "platform-updates-ios-android-macos" ? (
                                             <>
                                                 <div class="flex justify-center gap-4 mb-4">
                                                     <span class="text-4xl">📱</span>
@@ -148,6 +168,9 @@ const changelogPosts = [
             <div class="mt-12 text-center">
                 <h3 class="text-lg font-semibold text-nordic-text mb-4">Browse by Category</h3>
                 <div class="flex flex-wrap justify-center gap-3">
+                    <a href="/changelog?category=community" class="px-4 py-2 bg-white border border-gray-200 rounded-lg text-nordic-text hover:border-nordic-accent hover:text-nordic-accent transition-colors">
+                        Community
+                    </a>
                     <a href="/changelog?category=product-launch" class="px-4 py-2 bg-white border border-gray-200 rounded-lg text-nordic-text hover:border-nordic-accent hover:text-nordic-accent transition-colors">
                         Product Launch
                     </a>
